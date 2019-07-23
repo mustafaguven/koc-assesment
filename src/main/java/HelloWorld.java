@@ -5,5 +5,11 @@ public class HelloWorld {
         if(1==1){
 
         }
+
+        String abc = null;
+
+        if(abc == "a"){
+            System.out.println("bcb");
+        }
     }
 }

@@ -35,4 +35,13 @@ node {
     stage('remove docker image from jenkins machine') {
         sh "docker rmi hello-world -f"
     }
+
+    stage('PSEUDO connect qa via ssh and remove docker image which is running'){
+        sh "echo 'docker rmi mustafaguven/hello-world -f && echo old image is removed || echo none image found to be removed'"
+    }
+
+    stage('PSEUDO connect qa via ssh and run latest docker'){
+        sh "echo 'ssh -tt -l devops ec2-user@10.10.10.10 docker run -d -p 10000:10000 --name hello-world mustafaguven/hello-world"
+    }
+
 }
