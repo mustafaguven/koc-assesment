@@ -41,7 +41,7 @@ node {
     }
 
     stage('PSEUDO connect qa via ssh and run latest docker'){
-        sh "echo 'ssh -tt -l devops ec2-user@10.10.10.10 docker run -d -p 10000:10000 --name hello-world mustafaguven/hello-world"
+        sh "echo 'ssh -tt -l devops ec2-user@10.10.10.10 docker run -d -p 10000:10000 --name hello-world mustafaguven/hello-world'"
     }
 
 }
